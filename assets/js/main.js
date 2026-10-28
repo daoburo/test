@@ -80,9 +80,8 @@
       return '<tr><td class="d">' + fdate(r.d) + '</td>' +
         '<td class="c">' + esc(r.c) + (r.st === 'ip' ? '<span class="tag-ip">в работе</span>' : '') +
         '<span class="k">' + esc(D.categories[r.k]) + '</span></td>' +
-        '<td class="s">' + esc(r.s) + '</td>' +
-        '<td class="r v">' + money(r.v) + '</td></tr>';
-    }).join('') : '<tr><td colspan="4" class="empty">Ничего не найдено. Измените условия поиска.</td></tr>';
+        '<td class="s">' + esc(r.s) + '</td></tr>';
+    }).join('') : '<tr><td colspan="3" class="empty">Ничего не найдено. Измените условия поиска.</td></tr>';
     $('#more').hidden = list.length <= state.shown;
   }
   function reset() { state.shown = STEP; renderRows(); }

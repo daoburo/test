@@ -209,3 +209,6 @@ blockquote footer { font-size: 14px; color: var(--mute); }
   .sec--dark, .sec--soft { background: #fff; color: #000; }
   .sec--dark h2, .sec--dark .num, .big a, .req dt { color: #000; }
 }
+
+.sec--dark a.mail { color: #fff; font-weight: 600; }
+.sec--dark a.mail:hover { color: #cfe0ff; }
