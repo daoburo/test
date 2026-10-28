@@ -49,4 +49,23 @@
       else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     }
   });
+
+  // Карточки заказчиков: раскрытие по нажатию (на компьютере также при наведении, через CSS)
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.cg li'));
+  function closeCards(except) {
+    cards.forEach(function (li) {
+      if (li !== except) { li.classList.remove('is-open'); li.querySelector('.c').setAttribute('aria-expanded', 'false'); }
+    });
+  }
+  cards.forEach(function (li) {
+    var btn = li.querySelector('.c');
+    btn.addEventListener('click', function () {
+      var open = !li.classList.contains('is-open');
+      closeCards(li);
+      li.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', open);
+    });
+  });
+  document.addEventListener('click', function (e) { if (!e.target.closest('.cg li')) closeCards(null); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeCards(null); });
 })();
