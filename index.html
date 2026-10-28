@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>СК «Статус»</title>
   <meta name="description" content="Строительная корпорация «Статус»: 30 лет на рынке, 150+ выполненных объектов. Ремонт и реконструкция больниц, жилых домов и общественных зданий, котельные, кровли и фасады в Москве и Московской области.">
-  <meta property="og:title" content="СК «Статус» — 30 лет строим и ремонтируем для города">
+  <meta property="og:title" content="СК «Статус» — 30 лет ремонтируем больницы, дома и здания Москвы">
   <meta property="og:description" content="150+ выполненных объектов в Москве и Московской области.">
   <meta property="og:image" content="assets/img/boiler.webp">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
   <meta name="theme-color" content="#1c2129">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231c2129'/%3E%3Crect x='14' y='14' width='36' height='36' fill='none' stroke='%23e8590c' stroke-width='6'/%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Unbounded:wght@500;700&display=swap">
+  <link rel="preload" href="assets/fonts/unbounded-700-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/golos-400-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -28,13 +29,13 @@
     <nav class="nav" id="nav" aria-label="Основное меню">
       <a href="#history">История</a>
       <a href="#services">Направления</a>
-      <a href="#hospitals">Госпитали</a>
       <a href="#gallery">Объекты</a>
+      <a href="#hospitals">Госпитали</a>
       <a href="#contacts">Контакты</a>
     </nav>
     <a class="phone" href="tel:+74993221315">8 (499) 322-13-15</a>
     <a class="phone-btn" href="tel:+74993221315" aria-label="Позвонить: 8 (499) 322-13-15"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="#fff" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></a>
-    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <button type="button" class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -43,11 +44,11 @@
     <div class="wrap hero__in">
       <div class="hero__txt">
         <p class="eyebrow">Москва и Московская область</p>
-        <h1>30 лет строим и&nbsp;ремонтируем для&nbsp;города</h1>
+        <h1>30 лет ремонтируем больницы, дома и&nbsp;здания Москвы</h1>
         <p class="lead">Ремонт и реконструкция больниц, жилых домов и общественных зданий. Котельные и инженерные системы, кровли и фасады, помещения под медицинское оборудование.</p>
         <div class="hero__cta">
           <a class="btn" href="#gallery">Наши объекты</a>
-          <a class="btn btn--ghost" href="#contacts">Связаться</a>
+          <a class="btn btn--ghost" href="#contacts">Обсудить объект</a>
         </div>
       </div>
       <dl class="hero__stats">
@@ -65,7 +66,7 @@
         <h2>От обслуживания домов до&nbsp;больших объектов</h2>
       </div>
       <ol class="timeline">
-        <li><b>1996</b><h3>Начало работы</h3><p>Техническое обслуживание жилых домов: отопление, вентиляция, инженерные сети.</p></li>
+        <li><b>1996–2015</b><h3>Обслуживание домов</h3><p>Вели несколько районов Москвы и большое количество жилых домов: отопление, вентиляция, инженерные сети.</p></li>
         <li><b>2016</b><h3>Первые подрядные объекты</h3><p>Ремонт зданий и помещений, кровель и инженерных систем.</p></li>
         <li><b>2017–2019</b><h3>Котельные и капремонт</h3><p>Реконструкция котельных и тепловых узлов, капитальный ремонт больниц.</p></li>
         <li><b>2020–2021</b><h3>Фасады и капремонт зданий</h3><p>40+ объектов за два года: вентилируемые фасады, капитальный ремонт зданий.</p></li>
@@ -78,7 +79,7 @@
     <div class="wrap">
       <div class="sec__head">
         <p class="kicker">Направления</p>
-        <h2>Что мы делаем</h2>
+        <h2>Чем мы занимаемся</h2>
       </div>
       <div class="svc">
         <article><div class="svc__n">60<span>+</span></div><div class="svc__u">объектов</div><h3>Текущий ремонт</h3><p>Помещения больниц и учреждений: отделка, лестницы, окна, двери, электрика.</p></article>
@@ -86,7 +87,44 @@
         <article><div class="svc__n">15<span>+</span></div><div class="svc__u">объектов</div><h3>Медицинские помещения</h3><p>Переоборудование под рентген, КТ и МРТ в действующих больницах.</p></article>
         <article><div class="svc__n">15<span>+</span></div><div class="svc__u">объектов</div><h3>Кровли и фасады</h3><p>Мягкие и металлические кровли, аварийный ремонт, вентилируемые фасады.</p></article>
         <article><div class="svc__n">14</div><div class="svc__u">объектов</div><h3>Котельные и инженерия</h3><p>Котельные, тепловые узлы, отопление, вентиляция, подготовка к отопительному сезону.</p></article>
-        <article class="svc__cta"><h3>Под ключ</h3><p>Сверяем смету с фактическими объёмами, ведём исполнительную документацию, сдаём объект комиссии.</p><a class="btn" href="#contacts">Обсудить объект</a></article>
+      </div>
+      <p class="svc__note">Данные из реестра контрактов. В общее число «150+ объектов» входят также доступная среда, благоустройство, прочие и коммерческие договоры.</p>
+      <div class="how">
+        <h3>Как мы работаем</h3>
+        <ol>
+          <li><b>01</b><span>Сверяем смету с фактическими объёмами</span></li>
+          <li><b>02</b><span>Ведём исполнительную документацию</span></li>
+          <li><b>03</b><span>Сдаём объект комиссии</span></li>
+        </ol>
+        <a class="btn" href="#contacts">Обсудить объект</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="gallery">
+    <div class="wrap">
+      <div class="sec__head">
+        <p class="kicker">Объекты</p>
+        <h2>Объекты и фото работ</h2>
+      </div>
+      <div class="gal">
+        <button type="button" class="g g--wide" data-src="assets/img/boiler.webp"><img loading="lazy" width="720" height="540" src="assets/img/boiler-s.webp" alt="Монтаж котлов в котельной"><span>Монтаж котлов</span></button>
+        <button type="button" class="g" data-src="assets/img/boiler-new.webp"><img loading="lazy" width="720" height="540" src="assets/img/boiler-new-s.webp" alt="Котельная после реконструкции"><span>Котельная после реконструкции</span></button>
+        <button type="button" class="g" data-src="assets/img/facade.webp"><img loading="lazy" width="720" height="540" src="assets/img/facade-s.webp" alt="Монтаж вентилируемого фасада"><span>Вентилируемый фасад</span></button>
+        <button type="button" class="g g--wide" data-src="assets/img/roof.webp"><img loading="lazy" width="720" height="540" src="assets/img/roof-s.webp" alt="Устройство мягкой кровли"><span>Мягкая кровля</span></button>
+        <button type="button" class="g g--wide" data-src="assets/img/sanatorium-02-hall-stage.webp"><img loading="lazy" width="720" height="540" src="assets/img/sanatorium-02-hall-stage-s.webp" alt="Зал со сценой и экраном в детском санатории после ремонта"><span>Детский санаторий: зал</span></button>
+        <button type="button" class="g" data-src="assets/img/sanatorium-03-hall-wide.webp"><img loading="lazy" width="720" height="540" src="assets/img/sanatorium-03-hall-wide-s.webp" alt="Зал в детском санатории: окрашенные стены, новый пол и освещение"><span>Детский санаторий: отделка зала</span></button>
+        <button type="button" class="g g--wide" data-src="assets/img/interior-01-windows.webp"><img loading="lazy" width="720" height="540" src="assets/img/interior-01-windows-s.webp" alt="Помещение после ремонта: окна, радиаторы, панели"><span>Помещения после ремонта</span></button>
+        <button type="button" class="g" data-src="assets/img/interior-03-enfilade.webp"><img loading="lazy" width="720" height="540" src="assets/img/interior-03-enfilade-s.webp" alt="Анфилада помещений после отделки"><span>Отделка стен и полов</span></button>
+        <button type="button" class="g" data-src="assets/img/interior-02-doorway-sink.webp"><img loading="lazy" width="720" height="540" src="assets/img/interior-02-doorway-sink-s.webp" alt="Помещение с раковиной и дверным проёмом"><span>Санузлы и раковины</span></button>
+        <button type="button" class="g g--wide" data-src="assets/img/interior-08-door-sink.webp"><img loading="lazy" width="720" height="540" src="assets/img/interior-08-door-sink-s.webp" alt="Входная группа помещения, кондиционер"><span>Двери и кондиционирование</span></button>
+        <button type="button" class="g g--wide" data-src="assets/img/interior-05-room-window.webp"><img loading="lazy" width="720" height="540" src="assets/img/interior-05-room-window-s.webp" alt="Палата с окном и медицинской панелью"><span>Палаты с медицинскими панелями</span></button>
+        <button type="button" class="g" data-src="assets/img/interior-06-radiator-panel.webp"><img loading="lazy" width="720" height="540" src="assets/img/interior-06-radiator-panel-s.webp" alt="Помещение с радиатором и панелью"><span>Отопление и инженерия</span></button>
+      </div>
+      <h3 class="ba__t">Тепловой узел: до и после реконструкции</h3>
+      <div class="ba">
+        <figure><img loading="lazy" width="720" height="540" src="assets/img/before-s.webp" alt="Тепловой узел до реконструкции"><figcaption>До</figcaption></figure>
+        <figure><img loading="lazy" width="720" height="540" src="assets/img/after-s.webp" alt="Тепловой узел после реконструкции"><figcaption>После</figcaption></figure>
       </div>
     </div>
   </section>
@@ -94,7 +132,7 @@
   <section class="sec sec--hosp" id="hospitals">
     <div class="wrap grid2">
       <div>
-        <p class="kicker">Госпитали</p>
+        <p class="kicker">Медицинские объекты</p>
         <h2>Работаем для госпиталей ветеранов войн</h2>
         <p class="hosp__lead">Готовим помещения под диагностическое оборудование в ГБУЗ «Госпиталь для ветеранов войн № 1» и «№ 2» ДЗМ: от проекта и экспертизы до сдачи объекта.</p>
         <p class="hosp__n"><b>7</b><span>договоров с 2024 года</span></p>
@@ -114,33 +152,6 @@
     </div>
   </section>
 
-  <section class="sec" id="gallery">
-    <div class="wrap">
-      <div class="sec__head">
-        <p class="kicker">Объекты</p>
-        <h2>С наших объектов</h2>
-      </div>
-      <div class="gal">
-        <button class="g g--wide" data-src="assets/img/boiler.webp"><img loading="lazy" src="assets/img/boiler-s.webp" alt="Монтаж котлов в котельной"><span>Монтаж котлов</span></button>
-        <button class="g" data-src="assets/img/boiler-new.webp"><img loading="lazy" src="assets/img/boiler-new-s.webp" alt="Котельная после реконструкции"><span>Котельная после реконструкции</span></button>
-        <button class="g" data-src="assets/img/facade.webp"><img loading="lazy" src="assets/img/facade-s.webp" alt="Монтаж вентилируемого фасада"><span>Вентилируемый фасад</span></button>
-        <button class="g g--wide" data-src="assets/img/roof.webp"><img loading="lazy" src="assets/img/roof-s.webp" alt="Устройство мягкой кровли"><span>Мягкая кровля</span></button>
-        <button class="g g--wide" data-src="assets/img/sanatorium-02-hall-stage.webp"><img loading="lazy" src="assets/img/sanatorium-02-hall-stage-s.webp" alt="Зал со сценой и экраном в детском санатории после ремонта"><span>Детский санаторий: зал</span></button>
-        <button class="g" data-src="assets/img/sanatorium-03-hall-wide.webp"><img loading="lazy" src="assets/img/sanatorium-03-hall-wide-s.webp" alt="Зал в детском санатории: окрашенные стены, новый пол и освещение"><span>Детский санаторий: отделка зала</span></button>
-        <button class="g g--wide" data-src="assets/img/interior-01-windows.webp"><img loading="lazy" src="assets/img/interior-01-windows-s.webp" alt="Помещение после ремонта: окна, радиаторы, панели"><span>Помещения после ремонта</span></button>
-        <button class="g" data-src="assets/img/interior-03-enfilade.webp"><img loading="lazy" src="assets/img/interior-03-enfilade-s.webp" alt="Анфилада помещений после отделки"><span>Отделка стен и полов</span></button>
-        <button class="g" data-src="assets/img/interior-02-doorway-sink.webp"><img loading="lazy" src="assets/img/interior-02-doorway-sink-s.webp" alt="Помещение с раковиной и дверным проёмом"><span>Санузлы и раковины</span></button>
-        <button class="g g--wide" data-src="assets/img/interior-08-door-sink.webp"><img loading="lazy" src="assets/img/interior-08-door-sink-s.webp" alt="Входная группа помещения, кондиционер"><span>Двери и кондиционирование</span></button>
-        <button class="g g--wide" data-src="assets/img/interior-05-room-window.webp"><img loading="lazy" src="assets/img/interior-05-room-window-s.webp" alt="Палата с окном и медицинской панелью"><span>Палаты с медицинскими панелями</span></button>
-        <button class="g" data-src="assets/img/interior-06-radiator-panel.webp"><img loading="lazy" src="assets/img/interior-06-radiator-panel-s.webp" alt="Помещение с радиатором и панелью"><span>Отопление и инженерия</span></button>
-      </div>
-      <div class="ba">
-        <figure><img loading="lazy" src="assets/img/before-s.webp" alt="Тепловой узел до реконструкции"><figcaption>До</figcaption></figure>
-        <figure><img loading="lazy" src="assets/img/after-s.webp" alt="Тепловой узел после реконструкции"><figcaption>После</figcaption></figure>
-      </div>
-    </div>
-  </section>
-
   <section class="sec sec--dark" id="contacts">
     <div class="wrap grid2">
       <div>
@@ -148,8 +159,12 @@
         <h2>Обсудим ваш объект</h2>
         <p class="big"><a href="tel:+74993221315">8 (499) 322-13-15</a></p>
         <p class="mail"><a href="mailto:Status-sk@mail.ru">Status-sk@mail.ru</a></p>
-        <p class="addr">115193, г. Москва, ул. Сайкина, д. 11/2, ком. 12</p>
-        <a class="btn" href="tel:+74993221315">Позвонить</a>
+        <p class="hours">Пн–Пт, 9:00–18:00</p>
+        <p class="addr">115193, г. Москва, ул. Сайкина, д. 11/2, ком. 12 · <a href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB.%20%D0%A1%D0%B0%D0%B9%D0%BA%D0%B8%D0%BD%D0%B0%2C%2011%2F2" target="_blank" rel="noopener">на карте</a></p>
+        <div class="cta">
+          <a class="btn" href="tel:+74993221315">Позвонить</a>
+          <a class="btn btn--ghost" href="mailto:Status-sk@mail.ru?subject=%D0%97%D0%B0%D0%BF%D1%80%D0%BE%D1%81%20%D0%BF%D0%BE%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%83">Написать</a>
+        </div>
       </div>
       <dl class="req">
         <div><dt>Наименование</dt><dd>ООО «Строительная корпорация «Статус»</dd></div>
@@ -170,7 +185,9 @@
 </footer>
 
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Просмотр фото">
-  <button class="lb__x" aria-label="Закрыть">×</button>
+  <button type="button" class="lb__x" aria-label="Закрыть">×</button>
+  <button type="button" class="lb__nav lb__prev" aria-label="Предыдущее фото">‹</button>
+  <button type="button" class="lb__nav lb__next" aria-label="Следующее фото">›</button>
   <img alt="">
   <p></p>
 </div>
