@@ -2,6 +2,7 @@
   var D = window.STATUS_DATA;
   var C = window.STATUS_CONTRACTS;
   var meta = C.meta;
+  var SINCE = 1996; // начало работы на рынке; ООО СК «Статус» зарегистрировано в 2016 году
   var $ = function (s) { return document.querySelector(s); };
   var esc = function (s) {
     return String(s).replace(/[&<>"]/g, function (c) {
@@ -14,23 +15,23 @@
     return Math.round(v / 1e3) + ' тыс. ₽';
   };
   var fdate = function (d) { return d.slice(8) + '.' + d.slice(5, 7) + '.' + d.slice(0, 4); };
+  var thisYear = new Date().getFullYear();
 
   // Строки реестра: [дата, заказчик, предмет, сумма, категория, статус]
   var rows = C.rows.map(function (r) {
     return { d: r[0], y: +r[0].slice(0, 4), c: r[1], s: r[2], v: r[3], k: r[4], st: r[5] };
   });
 
-  // Цифры. Итоги считаются по всем договорам реестра, включая коммерческие
-  var thisYear = new Date().getFullYear();
+  // Цифры. Итоги по договорам считаются по всему реестру, включая коммерческие
   $('#stats').innerHTML = [
-    ['с ' + meta.first, 'года выполняем подрядные работы'],
+    [thisYear - SINCE, 'лет на рынке строительных услуг'],
     [meta.count, 'договоров в реестре контрактов'],
-    ['≈ ' + money(meta.total), 'общий объём договоров'],
+    [money(meta.total), 'общий объём договоров'],
     [meta.customers, 'бюджетных заказчиков']
-  ].map(function (x) { return '<div><b>' + esc(x[0]) + '</b><span>' + esc(x[1]) + '</span></div>'; }).join('');
-  $('#adv-exp').textContent = meta.count + ' договоров с ' + meta.first + ' года, ' + meta.customers + ' бюджетных заказчиков.';
-  $('#exp-sub').textContent = 'Сведения из реестра контрактов на 01.09.2026: ' + meta.count + ' договоров, из них ' +
-    meta.ip + ' на исполнении. Остальные завершены.';
+  ].map(function (x) { return '<div><dt>' + esc(x[1]) + '</dt><dd>' + esc(x[0]) + '</dd></div>'; }).join('');
+  $('#exp-sub').textContent = 'Сведения из реестра контрактов ООО СК «Статус» на 01.09.2026: ' + meta.count +
+    ' договоров с ' + meta.first + ' года, из них ' + meta.ip + ' на исполнении, остальные завершены. ' +
+    'Опыт до 2016 года накоплен в других юридических лицах и в реестр не входит.';
   $('#yr').textContent = thisYear;
 
   // Меню
@@ -46,25 +47,26 @@
   // Динамика по годам
   var ys = Object.keys(meta.years);
   var maxV = Math.max.apply(null, ys.map(function (y) { return meta.years[y][1]; }));
-  $('#years').innerHTML = ys.map(function (y) {
-    var n = meta.years[y][0], v = meta.years[y][1];
-    return '<div class="y"><div class="y__bar" style="height:' + Math.max(4, Math.round(v / maxV * 100)) + '%"></div>' +
-      '<b>' + y + '</b><span>' + n + ' дог.</span><span>' + money(v) + '</span></div>';
+  var bars = ys.map(function (y) {
+    var v = meta.years[y][1];
+    return '<div class="y"><span class="y__v">' + money(v).replace(' ₽', '') + '</span>' +
+      '<div class="y__bar" style="height:' + Math.max(2, Math.round(v / maxV * 82)) + '%"></div></div>';
   }).join('');
+  var lbls = ys.map(function (y) {
+    return '<div><b>' + y + '</b><span>' + meta.years[y][0] + ' дог.</span></div>';
+  }).join('');
+  $('#years').innerHTML = bars;
+  $('#years').insertAdjacentHTML('afterend', '<div class="years-lbl" aria-hidden="true">' + lbls + '</div>');
 
   // Реестр: поиск, год, вид работ
   var state = { k: 'all', y: 'all', q: '', shown: 20 };
   var STEP = 20;
-  var years = ys.slice().reverse();
-  $('#yr-f').innerHTML = '<option value="all">Все годы</option>' + years.map(function (y) {
+  $('#yr-f').innerHTML = '<option value="all">Все годы</option>' + ys.slice().reverse().map(function (y) {
     return '<option>' + y + '</option>';
   }).join('');
-  var kinds = [['all', 'Все виды']].concat(Object.keys(D.categories).filter(function (k) {
+  $('#kind-f').innerHTML = '<option value="all">Все виды</option>' + Object.keys(D.categories).filter(function (k) {
     return rows.some(function (r) { return r.k === k; });
-  }).map(function (k) { return [k, D.categories[k]]; }));
-  $('#chips').innerHTML = kinds.map(function (c) {
-    return '<button class="chip' + (c[0] === 'all' ? ' is-on' : '') + '" data-c="' + c[0] + '">' + esc(c[1]) + '</button>';
-  }).join('');
+  }).map(function (k) { return '<option value="' + k + '">' + esc(D.categories[k]) + '</option>'; }).join('');
 
   function renderRows() {
     var q = state.q.toLowerCase();
@@ -74,23 +76,18 @@
         (!q || (r.c + ' ' + r.s).toLowerCase().indexOf(q) > -1);
     });
     $('#count').textContent = 'Найдено договоров: ' + list.length;
-    $('#proj').innerHTML = list.slice(0, state.shown).map(function (r) {
-      return '<article class="p">' +
-        '<div class="p__tag">' + esc(D.categories[r.k]) + ' · ' + fdate(r.d) + (r.st === 'ip' ? ' · на исполнении' : '') + '</div>' +
-        '<h3>' + esc(r.c) + '</h3>' +
-        '<p class="p__txt">' + esc(r.s) + '</p>' +
-        '<p class="p__sum">' + money(r.v) + '</p></article>';
-    }).join('');
+    $('#proj').innerHTML = list.length ? list.slice(0, state.shown).map(function (r) {
+      return '<tr><td class="d">' + fdate(r.d) + '</td>' +
+        '<td class="c">' + esc(r.c) + (r.st === 'ip' ? '<span class="tag-ip">в работе</span>' : '') +
+        '<span class="k">' + esc(D.categories[r.k]) + '</span></td>' +
+        '<td class="s">' + esc(r.s) + '</td>' +
+        '<td class="r v">' + money(r.v) + '</td></tr>';
+    }).join('') : '<tr><td colspan="4" class="empty">Ничего не найдено. Измените условия поиска.</td></tr>';
     $('#more').hidden = list.length <= state.shown;
   }
   function reset() { state.shown = STEP; renderRows(); }
-  $('#chips').addEventListener('click', function (e) {
-    var b = e.target.closest('.chip'); if (!b) return;
-    state.k = b.dataset.c;
-    [].forEach.call(document.querySelectorAll('.chip'), function (x) { x.classList.toggle('is-on', x === b); });
-    reset();
-  });
   $('#yr-f').addEventListener('change', function (e) { state.y = e.target.value; reset(); });
+  $('#kind-f').addEventListener('change', function (e) { state.k = e.target.value; reset(); });
   $('#q').addEventListener('input', function (e) { state.q = e.target.value.trim(); reset(); });
   $('#more').addEventListener('click', function () { state.shown += STEP; renderRows(); });
   renderRows();
@@ -107,7 +104,7 @@
     return n + (m === 1 && t !== 11 ? ' договор' : (m >= 2 && m <= 4 && (t < 10 || t >= 20) ? ' договора' : ' договоров'));
   };
   $('#top5').innerHTML = all.slice(0, 6).map(function (o) {
-    return '<div class="t"><b>' + esc(o.n) + '</b><span>' + plural(o.cnt) + '</span><em>' + money(o.sum) + '</em></div>';
+    return '<li><b>' + esc(o.n) + '</b><span>' + plural(o.cnt) + '</span><em>' + money(o.sum) + '</em></li>';
   }).join('');
 
   var group = function (n) {
@@ -120,7 +117,7 @@
   all.forEach(function (o) { (groups[group(o.n)] = groups[group(o.n)] || []).push(o.n); });
   var order = ['Здравоохранение', 'Образование', 'Жилищники и управы', 'Прочие государственные заказчики'];
   $('#cust').innerHTML = order.filter(function (g) { return groups[g]; }).map(function (g) {
-    return '<div class="cg"><h3>' + esc(g) + '</h3><ul>' +
+    return '<div class="cg"><h4>' + esc(g) + '</h4><ul>' +
       groups[g].map(function (n) { return '<li>' + esc(n) + '</li>'; }).join('') + '</ul></div>';
   }).join('');
 

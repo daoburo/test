@@ -3,121 +3,151 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>СК «Статус» — строительная компания, Москва</title>
-  <meta name="description" content="ООО СК «Статус»: капитальный и текущий ремонт, кровли и фасады, инженерные системы для больниц, школ и жилищников Москвы и Московской области. Опыт работы с государственными заказчиками.">
-  <meta property="og:title" content="СК «Статус» — строительная компания, Москва">
-  <meta property="og:description" content="Капитальный и текущий ремонт, кровли, фасады, инженерные системы. Работаем с государственными заказчиками.">
-  <meta property="og:image" content="assets/img/facade-1.webp">
+  <title>СК «Статус» — строительные и ремонтные работы для государственных заказчиков</title>
+  <meta name="description" content="ООО СК «Статус», Москва. Капитальный и текущий ремонт, кровли, фасады, инженерные системы для больниц, школ, университетов и жилищных организаций. Опыт — с 1996 года, 155 договоров в реестре контрактов.">
+  <meta property="og:title" content="СК «Статус» — строительные и ремонтные работы для государственных заказчиков">
+  <meta property="og:description" content="Опыт с 1996 года. 155 договоров, более 1,1 млрд ₽. Больницы, школы, университеты, «Жилищники».">
+  <meta property="og:image" content="assets/img/vent-1.webp">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#14213d">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2314213d'/%3E%3Cpath d='M18 44V20h12l8 12V20h8v24H34l-8-12v12z' fill='%23ff8a1f'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#0b2f66">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230b2f66'/%3E%3Cpath d='M18 44V20h12l8 12V20h8v24H34l-8-12v12z' fill='%23fff'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<a class="skip" href="#main">Перейти к содержанию</a>
 
 <header class="top" id="top">
   <div class="wrap top__in">
-    <a class="logo" href="#top" aria-label="СК «Статус»">
-      <span class="logo__mark">С</span>
-      <span class="logo__txt"><b>СК «СТАТУС»</b><small>строительная компания</small></span>
+    <a class="logo" href="#top" aria-label="СК «Статус», на главную">
+      <span class="logo__mark" aria-hidden="true">С</span>
+      <span class="logo__txt"><b>СК «Статус»</b><small>Строительная корпорация</small></span>
     </a>
     <nav class="nav" id="nav" aria-label="Основное меню">
       <a href="#about">О компании</a>
-      <a href="#services">Услуги</a>
-      <a href="#projects">Объекты</a>
+      <a href="#services">Направления</a>
+      <a href="#experience">Опыт</a>
       <a href="#customers">Заказчики</a>
       <a href="#gallery">Фото</a>
       <a href="#contacts">Контакты</a>
     </nav>
     <a class="phone" href="tel:+74993221315">8 (499) 322-13-15</a>
-    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<main>
+<main id="main">
   <section class="hero">
-    <div class="hero__bg" role="img" aria-label="Фасадные работы на строительных лесах"></div>
     <div class="wrap hero__in">
-      <p class="eyebrow">Москва и Московская область</p>
-      <h1>Ремонт и строительство для больниц, школ и жилого фонда</h1>
-      <p class="lead">Капитальный и текущий ремонт, кровли, фасады, инженерные системы. Небольшая команда: быстрые решения без бюрократии и долгосрочные отношения с заказчиками.</p>
-      <div class="hero__cta">
-        <a class="btn" href="#projects">Выполненные объекты</a>
-        <a class="btn btn--ghost" href="#contacts">Связаться</a>
+      <div class="hero__txt">
+        <p class="eyebrow">Москва и Московская область</p>
+        <h1>Строительные и ремонтные работы для государственных заказчиков</h1>
+        <p class="lead">Больницы, школы, университеты, «Жилищники». Капитальный и текущий ремонт, кровли, фасады, инженерные системы. Опыт на рынке с 1996 года.</p>
+        <div class="hero__cta">
+          <a class="btn" href="#experience">Реестр договоров</a>
+          <a class="btn btn--line" href="#contacts">Реквизиты и контакты</a>
+        </div>
       </div>
+      <figure class="hero__img">
+        <img src="assets/img/vent-1.webp" alt="Монтаж вентилируемого фасада, Орехово-Зуево" width="960" height="1280" fetchpriority="high">
+      </figure>
     </div>
   </section>
 
-  <section class="stats" aria-label="Коротко о компании">
-    <div class="wrap stats__in" id="stats"></div>
+  <section class="facts" aria-label="Коротко о компании">
+    <div class="wrap"><dl class="facts__in" id="stats"></dl></div>
   </section>
 
   <section class="sec" id="about">
-    <div class="wrap two">
+    <div class="wrap grid2">
       <div>
+        <p class="num">01</p>
         <h2>О компании</h2>
-        <p>ООО «Строительная корпорация «Статус» выполняет ремонтные и строительные работы для государственных и муниципальных заказчиков: городских больниц, школ, университетов, районных «Жилищников» и организаций Московской области.</p>
-        <p>Мы небольшая компания, поэтому решения принимаем быстро и без лишних согласований. Работаем так, чтобы заказчик возвращался: многие объекты — повторные контракты с теми, кто уже проверил нас в деле.</p>
-        <p>Отдельное направление — специализированные работы в медицинских учреждениях: подготовка помещений под размещение медицинского оборудования (КТ, МРТ, рентген), создание условий для маломобильных групп.</p>
       </div>
-      <ul class="adv">
-        <li><b>Опыт</b><span id="adv-exp">Подтверждённый реестром контрактов опыт работы с государственными заказчиками.</span></li>
-        <li><b>Мобильность</b>Быстрый выход на объект и оперативное решение возникающих вопросов.</li>
-        <li><b>Прозрачность</b>Выявляем расхождения проектно-сметной документации с фактическими объёмами и фиксируем их в письменном виде.</li>
-        <li><b>Долгосрочные отношения</b>Повторные контракты и благодарственные отзывы заказчиков.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="sec sec--alt" id="services">
-    <div class="wrap">
-      <h2>Что мы делаем</h2>
-      <div class="cards">
-        <article class="card"><h3>Капитальный ремонт</h3><p>Здания и помещения целиком, подъезды и общее имущество многоквартирных домов, административные корпуса.</p></article>
-        <article class="card"><h3>Текущий ремонт</h3><p>Помещения больниц, школ и учреждений, лестницы, отделка, замена дверей, электрощитов и почтовых ящиков.</p></article>
-        <article class="card"><h3>Кровли и фасады</h3><p>Мягкие и металлические кровли, аварийно-восстановительный ремонт, вентилируемые и штукатурные фасады.</p></article>
-        <article class="card"><h3>Инженерные системы</h3><p>Отопление, тепловые узлы, вентиляция, электроизмерительные работы, обслуживание систем в жилых домах.</p></article>
-        <article class="card"><h3>Медицинские объекты</h3><p>Подготовка помещений под КТ, МРТ и рентген, ремонт отделений в действующих больницах.</p></article>
-        <article class="card"><h3>Дороги и благоустройство</h3><p>Ремонт внутриплощадных дорог, благоустройство территорий учреждений, доступная среда.</p></article>
+      <div class="prose">
+        <p>Строительная корпорация «Статус» выполняет ремонтные и строительные работы для государственных и муниципальных заказчиков: городских больниц, школ, университетов, районных «Жилищников» и организаций Московской области.</p>
+        <p>Опыт работы на рынке строительных услуг — с 1996 года. Общество с ограниченной ответственностью СК «Статус» зарегистрировано в 2016 году, более ранний опыт накоплен в других юридических лицах.</p>
+        <p>Мы небольшая компания: быстро принимаем решения, оперативно выходим на объект и фиксируем в письменном виде расхождения проектно-сметной документации с фактическими объёмами. Многие заказчики заключают с нами повторные контракты.</p>
+        <dl class="def">
+          <div><dt>Руководитель</dt><dd>Генеральный директор Бородин Олег Васильевич</dd></div>
+          <div><dt>Работаем по</dt><dd>44-ФЗ, 223-ФЗ, договорам бюджетных учреждений</dd></div>
+          <div><dt>Территория</dt><dd>Москва и Московская область</dd></div>
+        </dl>
       </div>
     </div>
   </section>
 
-  <section class="sec" id="projects">
+  <section class="sec sec--soft" id="services">
+    <div class="wrap grid2">
+      <div>
+        <p class="num">02</p>
+        <h2>Направления работ</h2>
+      </div>
+      <ol class="svc">
+        <li><h3>Капитальный ремонт</h3><p>Здания и помещения целиком, подъезды и общее имущество многоквартирных домов, административные корпуса.</p></li>
+        <li><h3>Текущий ремонт</h3><p>Помещения больниц, школ и учреждений, лестницы, отделка, замена окон и дверей, электрощитов.</p></li>
+        <li><h3>Кровли и фасады</h3><p>Мягкие и металлические кровли, аварийно-восстановительный ремонт, вентилируемые и штукатурные фасады.</p></li>
+        <li><h3>Инженерные системы</h3><p>Отопление, тепловые узлы, вентиляция, электроизмерительные работы, подготовка к отопительному сезону.</p></li>
+        <li><h3>Медицинские объекты</h3><p>Подготовка помещений под размещение рентгена, КТ и МРТ, ремонт отделений в действующих больницах.</p></li>
+        <li><h3>Доступная среда и благоустройство</h3><p>Обеспечение доступа маломобильных групп населения, ремонт дорог, благоустройство территорий.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="experience">
     <div class="wrap">
-      <h2>Опыт работы в цифрах</h2>
-      <p class="sub" id="exp-sub"></p>
-      <div class="years" id="years" aria-label="Динамика договоров по годам"></div>
-      <h2 class="h2-gap">Реестр выполненных работ</h2>
-      <p class="sub">Контракты с государственными и муниципальными заказчиками: больницы, школы, университеты, «Жилищники», администрации.</p>
+      <div class="grid2">
+        <div>
+          <p class="num">03</p>
+          <h2>Опыт: реестр договоров</h2>
+        </div>
+        <p class="prose" id="exp-sub"></p>
+      </div>
+      <div class="years" id="years" role="img" aria-label="Количество и объём договоров по годам"></div>
+
+      <h3 class="h3">Выполненные работы</h3>
       <div class="tools">
-        <input class="search" id="q" type="search" placeholder="Поиск: заказчик, адрес, вид работ" aria-label="Поиск по реестру">
-        <select class="sel" id="yr-f" aria-label="Год"></select>
+        <label class="fld"><span>Поиск</span><input class="search" id="q" type="search" placeholder="Заказчик, адрес, вид работ"></label>
+        <label class="fld"><span>Год</span><select class="sel" id="yr-f"></select></label>
+        <label class="fld"><span>Вид работ</span><select class="sel" id="kind-f"></select></label>
       </div>
-      <div class="chips" id="chips" role="group" aria-label="Фильтр по виду работ"></div>
-      <p class="count" id="count"></p>
-      <div class="proj" id="proj"></div>
-      <button class="btn more" id="more" hidden>Показать ещё</button>
+      <p class="count" id="count" aria-live="polite"></p>
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr><th scope="col">Дата</th><th scope="col">Заказчик</th><th scope="col">Предмет договора</th><th scope="col" class="r">Сумма</th></tr></thead>
+          <tbody id="proj"></tbody>
+        </table>
+      </div>
+      <button class="btn btn--line more" id="more" hidden>Показать ещё</button>
     </div>
   </section>
 
-  <section class="sec sec--alt" id="customers">
+  <section class="sec sec--soft" id="customers">
     <div class="wrap">
-      <h2>Основные заказчики</h2>
-      <p class="sub">Наибольший объём договоров за всё время работы.</p>
-      <div class="top" id="top5"></div>
-      <h3 class="rev__h">Все заказчики</h3>
+      <div class="grid2">
+        <div>
+          <p class="num">04</p>
+          <h2>Заказчики</h2>
+        </div>
+        <p class="prose">Организации с наибольшим объёмом договоров за всё время работы.</p>
+      </div>
+      <ol class="top" id="top5"></ol>
+      <h3 class="h3">Все заказчики</h3>
       <div class="cust" id="cust"></div>
-      <h3 class="rev__h">Отзывы заказчиков</h3>
+      <h3 class="h3">Отзывы заказчиков</h3>
       <div class="rev" id="rev"></div>
     </div>
   </section>
 
   <section class="sec" id="gallery">
     <div class="wrap">
-      <h2>Фото с объектов</h2>
+      <div class="grid2">
+        <div>
+          <p class="num">05</p>
+          <h2>Фото с объектов</h2>
+        </div>
+      </div>
       <div class="gal" id="gal"></div>
-      <h3 class="ba__h">Было и стало: котельная</h3>
+      <h3 class="h3">Было и стало: котельная</h3>
       <div class="ba">
         <figure><img loading="lazy" src="assets/img/before-s.webp" alt="Котельная до работ"><figcaption>До</figcaption></figure>
         <figure><img loading="lazy" src="assets/img/after-s.webp" alt="Котельная после работ"><figcaption>После</figcaption></figure>
@@ -126,22 +156,21 @@
   </section>
 
   <section class="sec sec--dark" id="contacts">
-    <div class="wrap two">
+    <div class="wrap grid2">
       <div>
-        <h2>Контакты</h2>
+        <p class="num">06</p>
+        <h2>Контакты и реквизиты</h2>
         <p class="big"><a href="tel:+74993221315">8 (499) 322-13-15</a></p>
-        <p>115193, Москва,<br>ул. Сайкина, д. 11/2</p>
-        <p>Генеральный директор: Бородин Олег Васильевич</p>
-        <a class="btn" href="tel:+74993221315">Позвонить</a>
+        <p>115193, г. Москва,<br>ул. Сайкина, д. 11/2, ком. 12</p>
       </div>
       <dl class="req">
-        <h3>Реквизиты</h3>
-        <div><dt>Полное название</dt><dd>ООО «Строительная корпорация «Статус»</dd></div>
-        <div><dt>ИНН</dt><dd>7723452354</dd></div>
-        <div><dt>КПП</dt><dd>772301001</dd></div>
-        <div><dt>ОГРН</dt><dd>1166313105970</dd></div>
-        <div><dt>Юр. адрес</dt><dd>115193, г. Москва, ул. Сайкина, д. 11/2, ком. 12</dd></div>
-        <div><dt>Основной ОКВЭД</dt><dd>43.99 Прочие специализированные строительные работы</dd></div>
+        <div><dt>Полное наименование</dt><dd>Общество с ограниченной ответственностью «Строительная корпорация «Статус»</dd></div>
+        <div><dt>Сокращённое</dt><dd>ООО СК «Статус»</dd></div>
+        <div><dt>ИНН / КПП</dt><dd>7723452354 / 772301001</dd></div>
+        <div><dt>ОГРН</dt><dd>1166313105970 (14.06.2016)</dd></div>
+        <div><dt>Юридический адрес</dt><dd>115193, г. Москва, ул. Сайкина, д. 11/2, ком. 12</dd></div>
+        <div><dt>Основной ОКВЭД</dt><dd>43.99 Работы строительные специализированные прочие</dd></div>
+        <div><dt>Генеральный директор</dt><dd>Бородин Олег Васильевич</dd></div>
       </dl>
     </div>
   </section>
@@ -150,11 +179,11 @@
 <footer class="foot">
   <div class="wrap foot__in">
     <span>© <span id="yr">2026</span> ООО СК «Статус». ИНН 7723452354</span>
-    <a href="#top">Наверх ↑</a>
+    <a href="#top">Наверх</a>
   </div>
 </footer>
 
-<div class="lb" id="lb" hidden>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Просмотр фото">
   <button class="lb__x" aria-label="Закрыть">×</button>
   <img alt="">
   <p></p>
