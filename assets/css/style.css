@@ -256,7 +256,8 @@ h2 { margin: 0; max-width: 760px; font: 700 clamp(28px, 3.4vw, 44px)/1.12 var(--
 .more .site:hover { color: #fff; }
 @media (max-width: 1020px) { .cg li:nth-child(4n) .more { left: -4px; right: auto; } .cg li:nth-child(2n) .more { left: auto; right: 0; } }
 @media (max-width: 640px) {
-  .cg li .c { min-height: 0; padding: 14px 40px 14px 16px; }
+  .cg li { flex-direction: column; }
+  .cg li .c { flex: none; min-height: 0; padding: 14px 40px 14px 16px; }
   .cg li .more, .cg li:nth-child(n) .more { position: static; width: auto; box-shadow: none; }
   .cg li:hover .more { display: none; }
   .cg li.is-open .more { display: block; }
