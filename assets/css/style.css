@@ -75,6 +75,7 @@ h1 { margin: 0 0 26px; font: 700 clamp(36px, 5.6vw, 72px)/1.04 var(--f-display);
 .sec { padding-block: 104px; }
 .sec--stone { background: var(--stone); }
 .sec--dark { background: var(--graphite); color: var(--on-dark); }
+.grid2 > * { min-width: 0; }
 .grid2 { display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: start; }
 .sec__head { margin-bottom: 56px; }
 .kicker { display: flex; align-items: center; gap: 12px; margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--signal-d); }
@@ -103,6 +104,18 @@ h2 { margin: 0; max-width: 760px; font: 700 clamp(28px, 3.4vw, 44px)/1.12 var(--
 .svc__cta h3 { margin: 0; font: 700 26px/1.15 var(--f-display); color: #fff; }
 .svc__cta p { color: var(--on-dark-mute); }
 .svc__cta .btn { align-self: flex-start; margin-top: 12px; }
+
+/* Госпитали ветеранов войн */
+.sec--hosp { background: var(--paper); border-top: 6px solid var(--signal); }
+.hosp__lead { margin: 24px 0 0; max-width: 480px; }
+.hosp__n { display: flex; align-items: baseline; gap: 16px; margin: 36px 0 0; }
+.hosp__n b { font: 700 72px/1 var(--f-display); color: var(--ink); }
+.hosp__n span { color: var(--mute); font-size: 16px; }
+.hosp { width: 100%; border-collapse: collapse; font-size: 16px; }
+.hosp th { padding: 10px 14px 10px 0; text-align: left; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--mute); border-bottom: 3px solid var(--ink); font-weight: 600; }
+.hosp td { padding: 16px 14px 16px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+.hosp td:first-child { width: 72px; font: 700 17px/1.5 var(--f-display); color: var(--ink); }
+.hosp td:nth-child(2) { width: 84px; font-weight: 600; color: var(--ink); white-space: nowrap; }
 
 /* Объекты */
 .gal { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
@@ -154,6 +167,15 @@ h2 { margin: 0; max-width: 760px; font: 700 clamp(28px, 3.4vw, 44px)/1.12 var(--
   .g, .g--wide { grid-column: span 1; }
 }
 /* Телефон */
+@media (max-width: 640px) {
+  .hosp, .hosp tbody { display: block; }
+  .hosp thead { display: none; }
+  .hosp tr { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 0 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .hosp td { padding: 0; border: 0; }
+  .hosp td:first-child, .hosp td:nth-child(2) { width: auto; }
+  .hosp td:nth-child(3) { grid-column: 1 / -1; margin-top: 4px; }
+  .hosp__n b { font-size: 56px; }
+}
 @media (max-width: 640px) {
   body { font-size: 16px; }
   .wrap { padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
