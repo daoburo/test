@@ -49,12 +49,7 @@
   </section>
 
   <section class="stats" aria-label="Коротко о компании">
-    <div class="wrap stats__in">
-      <div><b id="st-years">—</b><span>лет опыта в строительных услугах</span></div>
-      <div><b id="st-customers">—</b><span>заказчиков в нашем перечне</span></div>
-      <div><b id="st-projects">—</b><span>объектов в перечне выполненных работ</span></div>
-      <div><b>44-ФЗ / 223-ФЗ</b><span>опыт работы с госзаказчиками</span></div>
-    </div>
+    <div class="wrap stats__in" id="stats"></div>
   </section>
 
   <section class="sec" id="about">
@@ -66,7 +61,7 @@
         <p>Отдельное направление — специализированные работы в медицинских учреждениях: подготовка помещений под размещение медицинского оборудования (КТ, МРТ, рентген), создание условий для маломобильных групп.</p>
       </div>
       <ul class="adv">
-        <li><b>Опыт</b>Работаем на рынке строительных услуг с 1998 года.</li>
+        <li><b>Опыт</b><span id="adv-exp">Подтверждённый реестром контрактов опыт работы с государственными заказчиками.</span></li>
         <li><b>Мобильность</b>Быстрый выход на объект и оперативное решение возникающих вопросов.</li>
         <li><b>Прозрачность</b>Выявляем расхождения проектно-сметной документации с фактическими объёмами и фиксируем их в письменном виде.</li>
         <li><b>Долгосрочные отношения</b>Повторные контракты и благодарственные отзывы заказчиков.</li>
@@ -90,16 +85,28 @@
 
   <section class="sec" id="projects">
     <div class="wrap">
-      <h2>Выполненные работы</h2>
-      <p class="sub">Объекты, на которых мы работали по государственным и муниципальным контрактам.</p>
-      <div class="chips" id="chips" role="tablist" aria-label="Фильтр по виду работ"></div>
+      <h2>Опыт работы в цифрах</h2>
+      <p class="sub" id="exp-sub"></p>
+      <div class="years" id="years" aria-label="Динамика договоров по годам"></div>
+      <h2 class="h2-gap">Реестр выполненных работ</h2>
+      <p class="sub">Контракты с государственными и муниципальными заказчиками: больницы, школы, университеты, «Жилищники», администрации.</p>
+      <div class="tools">
+        <input class="search" id="q" type="search" placeholder="Поиск: заказчик, адрес, вид работ" aria-label="Поиск по реестру">
+        <select class="sel" id="yr-f" aria-label="Год"></select>
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="Фильтр по виду работ"></div>
+      <p class="count" id="count"></p>
       <div class="proj" id="proj"></div>
+      <button class="btn more" id="more" hidden>Показать ещё</button>
     </div>
   </section>
 
   <section class="sec sec--alt" id="customers">
     <div class="wrap">
       <h2>Основные заказчики</h2>
+      <p class="sub">Наибольший объём договоров за всё время работы.</p>
+      <div class="top" id="top5"></div>
+      <h3 class="rev__h">Все заказчики</h3>
       <div class="cust" id="cust"></div>
       <h3 class="rev__h">Отзывы заказчиков</h3>
       <div class="rev" id="rev"></div>
@@ -154,6 +161,7 @@
 </div>
 
 <script src="assets/js/data.js"></script>
+<script src="assets/js/contracts.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
