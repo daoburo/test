@@ -352,7 +352,6 @@ h2 { margin: 0; max-width: 760px; font: 700 clamp(28px, 3.4vw, 44px)/1.12 var(--
 /* Фото видов работ: на компьютере сначала два снимка, остальные по кнопке */
 .work__more { display: none; }
 @media (min-width: 641px) {
-  .work__ph.is-folded .g:nth-child(n+3) { display: none; }
   .work__more { display: inline-block; margin-top: 12px; padding: 12px 20px; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); font: 600 15px/1 var(--f-body); cursor: pointer; }
   .work__more:hover { background: var(--ink); color: #fff; }
 }
@@ -360,3 +359,13 @@ h2 { margin: 0; max-width: 760px; font: 700 clamp(28px, 3.4vw, 44px)/1.12 var(--
 /* До и после: не больше экрана по высоте */
 .car { max-width: 720px; }
 .car .cmp { aspect-ratio: 4 / 3; max-height: min(70vh, 560px); }
+
+/* Компактнее: фото видов работ и До и после */
+.work { grid-template-columns: minmax(0, 300px) minmax(0, 1fr); }
+.work__ph { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; max-width: 640px; }
+.work__ph .g img { aspect-ratio: 4 / 3; }
+@media (min-width: 641px) { .work__ph.is-folded .g:nth-child(n+4) { display: none; } }
+.car { max-width: 460px; }
+.car .cmp { aspect-ratio: 4 / 3; max-height: 340px; }
+@media (max-width: 1020px) { .work { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .car { max-width: none; } .car .cmp { aspect-ratio: 4 / 3; max-height: 300px; } }
