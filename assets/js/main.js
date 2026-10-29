@@ -105,4 +105,18 @@
     window.addEventListener('resize', upd);
     upd();
   }
+
+  // Виды работ: на компьютере показываем два снимка, остальные раскрываются
+  Array.prototype.forEach.call(document.querySelectorAll('.work__ph'), function (ph) {
+    var n = ph.querySelectorAll('.g').length;
+    if (n < 3) return;
+    var side = document.createElement('div'); side.className = 'work__side';
+    ph.parentNode.insertBefore(side, ph); side.appendChild(ph);
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'work__more';
+    function label(folded) { btn.textContent = folded ? 'Показать все фото (' + n + ')' : 'Свернуть'; btn.setAttribute('aria-expanded', !folded); }
+    ph.classList.add('is-folded'); label(true);
+    btn.addEventListener('click', function () { label(ph.classList.toggle('is-folded')); });
+    side.appendChild(btn);
+  });
 })();

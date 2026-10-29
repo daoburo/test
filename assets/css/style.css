@@ -348,3 +348,15 @@ h2 { margin: 0; max-width: 760px; font: 700 clamp(28px, 3.4vw, 44px)/1.12 var(--
 .sec--dark .sro__facts > div { border-bottom-color: rgba(255, 255, 255, .2); }
 .sec--dark .sro__facts dt { color: var(--on-dark-mute); }
 .sec--dark .sro__facts dd { color: #fff; }
+
+/* Фото видов работ: на компьютере сначала два снимка, остальные по кнопке */
+.work__more { display: none; }
+@media (min-width: 641px) {
+  .work__ph.is-folded .g:nth-child(n+3) { display: none; }
+  .work__more { display: inline-block; margin-top: 12px; padding: 12px 20px; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); font: 600 15px/1 var(--f-body); cursor: pointer; }
+  .work__more:hover { background: var(--ink); color: #fff; }
+}
+.work__side { min-width: 0; }
+/* До и после: не больше экрана по высоте */
+.car { max-width: 720px; }
+.car .cmp { aspect-ratio: 4 / 3; max-height: min(70vh, 560px); }
