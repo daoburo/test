@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /crm/
 Allow: /
 
 Sitemap: https://www.status-sk.ru/sitemap.xml

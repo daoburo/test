@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>CRM — СК «Статус»</title>
+  <meta name="theme-color" content="#1c2129">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20fill='%231c2129'/%3E%3Crect%20x='4'%20y='4'%20width='56'%20height='56'%20fill='none'%20stroke='%23e8590c'%20stroke-width='8'/%3E%3Cpath%20d='M16%2048V38h11V28h11V18h11v30z'%20fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/css/fonts.css?v=8">
+  <link rel="stylesheet" href="crm.css">
+</head>
+<body>
+  <header class="top">
+    <div class="bar">
+      <div class="brand">СК «Статус» <span>CRM</span></div>
+      <div class="tools">
+        <button class="btn ghost" id="btn-export" type="button" title="Скачать все данные одним файлом">Резервная копия</button>
+        <label class="btn ghost" title="Загрузить данные из резервной копии">Восстановить<input id="file-import" type="file" accept=".json,application/json" hidden></label>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="cards" id="cards" aria-label="Сводка"></section>
+
+    <nav class="tabs" id="tabs" role="tablist" aria-label="Разделы"></nav>
+
+    <section class="panel" id="panel" role="tabpanel">
+      <div class="filters">
+        <input id="q" type="search" placeholder="Поиск по всем полям" aria-label="Поиск">
+        <select id="f-status" aria-label="Фильтр по статусу"></select>
+        <span class="count" id="count" aria-live="polite"></span>
+        <span class="grow"></span>
+        <button class="btn ghost" id="btn-csv" type="button">Скачать CSV</button>
+        <button class="btn primary" id="btn-add" type="button"></button>
+      </div>
+      <div class="scroll"><table id="table"></table></div>
+      <div class="empty" id="empty" hidden></div>
+    </section>
+
+    <p class="note">Данные хранятся в этом браузере (на этом компьютере). Чтобы перенести на другой компьютер или не потерять, делайте «Резервную копию».</p>
+  </main>
+
+  <dialog id="dlg">
+    <form method="dialog" id="form" novalidate>
+      <h2 id="dlg-title"></h2>
+      <div class="grid" id="dlg-fields"></div>
+      <div class="actions">
+        <button class="btn danger" type="button" id="btn-del">Удалить</button>
+        <span class="grow"></span>
+        <button class="btn ghost" type="button" id="btn-cancel">Отмена</button>
+        <button class="btn primary" type="submit">Сохранить</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="crm.js"></script>
+</body>
+</html>
