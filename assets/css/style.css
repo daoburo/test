@@ -33,7 +33,7 @@ h1, h2, h3 { text-wrap: balance; }
 .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30; background: var(--graphite); border-bottom: 1px solid rgba(255, 255, 255, .08); }
 .top__in { display: flex; align-items: center; gap: 32px; height: 68px; }
 .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
-.logo__mark { width: 30px; height: 30px; border: 5px solid var(--signal); }
+.logo__mark { width: 34px; height: 34px; flex: none; }
 .logo__txt { display: flex; flex-direction: column; font: 700 19px/1 var(--f-display); letter-spacing: .02em; text-transform: uppercase; }
 .logo__txt small { margin-top: 5px; font: 500 12px/1 var(--f-body); letter-spacing: .08em; color: var(--on-dark-mute); }
 .nav { display: flex; gap: 32px; margin-left: auto; }
