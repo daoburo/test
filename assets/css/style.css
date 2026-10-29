@@ -14,7 +14,7 @@
   --on-dark: #e9ecf0;
   --on-dark-mute: #9aa3af;
   --focus: #ffd43b;
-  --f-display: "Unbounded", "Arial Black", system-ui, sans-serif;
+  --f-display: "PT Sans Caption", "PT Sans", Arial, system-ui, sans-serif;
   --f-body: "Golos Text", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
 }
 * { box-sizing: border-box; }
@@ -434,3 +434,4 @@ h2 { margin: 0; max-width: 760px; font: 700 clamp(28px, 3.4vw, 44px)/1.12 var(--
   .pg__btns .btn { flex: 1 1 100%; text-align: center; }
   .callbar { display: block; position: sticky; bottom: 0; z-index: 20; padding: 16px; background: var(--signal); color: #fff; text-align: center; text-decoration: none; font: 700 18px/1.2 var(--f-body); }
 }
+h1, h2, h3 { text-wrap: balance; }
