@@ -79,4 +79,30 @@
     var set = function () { f.style.setProperty('--p', r.value + '%'); };
     r.addEventListener('input', set); set();
   });
+
+  // Карусель «до и после»
+  var car = document.querySelector('.car');
+  if (car) {
+    var track = car.querySelector('.car__track'), slides = track.children;
+    var prev = car.querySelector('.car__prev'), next = car.querySelector('.car__next');
+    var dots = car.querySelector('.car__dots'), num = car.querySelector('.car__n');
+    var go = function (i) { track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' }); };
+    Array.prototype.forEach.call(slides, function (s, i) {
+      var d = document.createElement('button');
+      d.type = 'button'; d.setAttribute('aria-label', 'Снимок ' + (i + 1));
+      d.addEventListener('click', function () { go(i); });
+      dots.appendChild(d);
+    });
+    var upd = function () {
+      var i = Math.round(track.scrollLeft / track.clientWidth);
+      Array.prototype.forEach.call(dots.children, function (d, k) { d.setAttribute('aria-current', k === i ? 'true' : 'false'); });
+      num.textContent = (i + 1) + ' / ' + slides.length;
+      prev.disabled = i === 0; next.disabled = i === slides.length - 1;
+    };
+    prev.addEventListener('click', function () { go(Math.round(track.scrollLeft / track.clientWidth) - 1); });
+    next.addEventListener('click', function () { go(Math.round(track.scrollLeft / track.clientWidth) + 1); });
+    track.addEventListener('scroll', upd, { passive: true });
+    window.addEventListener('resize', upd);
+    upd();
+  }
 })();
