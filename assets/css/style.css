@@ -272,3 +272,23 @@ h2 { margin: 0; max-width: 760px; font: 700 clamp(28px, 3.4vw, 44px)/1.12 var(--
 @media (max-width: 640px) { .cg summary { padding: 16px 2px; } .cg li .more, .cg li:nth-child(n) .more { max-height: none; } }
 
 .timeline b small { display: block; margin-top: 4px; font: 600 13px/1.2 var(--f-body); letter-spacing: .02em; color: var(--signal-d); }
+
+/* Допуски: выписка из реестра СРО */
+.sro__lead { margin: 24px 0 0; max-width: 480px; }
+.sro__status { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 24px 0 0; font-size: 15px; color: var(--mute); }
+.sro__status span { padding: 6px 12px; background: var(--signal); color: #fff; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+.sro__doc { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 24px; margin-top: 32px; }
+.sro__thumb { display: block; width: 168px; border: 1px solid var(--line); box-shadow: 0 8px 24px rgba(22, 26, 32, .12); transition: transform .2s; }
+.sro__thumb:hover { transform: translateY(-3px); }
+.sro__thumb img { width: 100%; height: auto; }
+.sro__links { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+.sro__ext { display: inline-block; padding-block: 10px; font-weight: 600; }
+.sro__facts { margin: 0; border-top: 3px solid var(--ink); }
+.sro__facts > div { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.sro__facts dt { font-size: 14px; line-height: 1.4; color: var(--mute); }
+.sro__facts dd { margin: 0; font-size: 16px; line-height: 1.5; color: var(--ink); font-weight: 500; }
+.sro__facts > div:nth-child(2) dd, .sro__facts > div:nth-child(3) dd { font: 700 17px/1.4 var(--f-display); }
+@media (max-width: 640px) {
+  .sro__facts > div { grid-template-columns: 1fr; gap: 4px; }
+  .sro__thumb { width: 132px; }
+}
