@@ -72,4 +72,11 @@
   });
   document.addEventListener('click', function (e) { if (!e.target.closest('.cg li')) closeCards(null); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeCards(null); });
+
+  // Сравнение «до и после»
+  Array.prototype.forEach.call(document.querySelectorAll('.cmp'), function (f) {
+    var r = f.querySelector('input');
+    var set = function () { f.style.setProperty('--p', r.value + '%'); };
+    r.addEventListener('input', set); set();
+  });
 })();

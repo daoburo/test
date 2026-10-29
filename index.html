@@ -18,8 +18,54 @@
   <link rel="preload" href="assets/fonts/golos-400-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "name": "ООО «Строительная корпорация «Статус»",
+    "alternateName": "СК «Статус»",
+    "url": "https://status-sk.ru/",
+    "logo": "https://status-sk.ru/assets/img/og-logo.png",
+    "image": "https://status-sk.ru/assets/img/og-logo.png",
+    "description": "Капитальный и текущий ремонт больниц, жилых и общественных зданий, реконструкция котельных, кровли и фасады в Москве и Московской области.",
+    "telephone": "+7-499-322-13-15",
+    "email": "Status-sk@mail.ru",
+    "taxID": "7723452354",
+    "vatID": "7723452354",
+    "identifier": "1166313105970",
+    "address": {
+      "@type": "PostalAddress",
+      "postalCode": "115193",
+      "addressCountry": "RU",
+      "addressLocality": "Москва",
+      "streetAddress": "ул. Сайкина, д. 11/2, ком. 12"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "areaServed": ["Москва", "Московская область"]
+  }
+  </script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113880160', 'ym');
+
+    ym(113880160, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <!-- /Yandex.Metrika counter -->
 </head>
 <body>
+<!-- Yandex.Metrika noscript -->
+<noscript><div><img src="https://mc.yandex.ru/watch/113880160" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+<!-- /Yandex.Metrika noscript -->
 <a class="skip" href="#main">Перейти к содержанию</a>
 
 <header class="top" id="top">
@@ -31,9 +77,8 @@
     <nav class="nav" id="nav" aria-label="Основное меню">
       <a href="#history">История</a>
       <a href="#works">Виды работ</a>
-      <a href="#licenses">Допуски</a>
       <a href="#customers">Заказчики</a>
-      
+      <a href="#sro">Допуски</a>
       <a href="#contacts">Контакты</a>
     </nav>
     <a class="phone" href="tel:+74993221315">8 (499) 322-13-15</a>
@@ -113,9 +158,13 @@
           <h3>Отопление и инженерные системы</h3>
           <ul><li>Отопление: радиаторы, трубопроводы</li><li>Вентиляция (ОВиК)</li><li>Электромонтаж (ЭОМ), электроизмерения</li><li>Водоснабжение и канализация (ВК)</li></ul>
         </div>
-        <div class="work__ph gal" style="--n:2">
+        <div class="work__ph gal" style="--n:6">
           <button type="button" class="g" data-src="assets/img/sanatorium-06-window-radiator.webp"><img loading="lazy" width="720" height="540" src="assets/img/sanatorium-06-window-radiator-s.webp" alt="Радиатор и трубопровод отопления под окном"><span>Радиатор и трубопровод</span></button>
           <button type="button" class="g" data-src="assets/img/sanatorium-09-room-peach.webp"><img loading="lazy" width="720" height="540" src="assets/img/sanatorium-09-room-peach-s.webp" alt="Помещение с радиатором и трубопроводом отопления"><span>Отопление в помещении</span></button>
+          <button type="button" class="g" data-src="assets/img/starob-radiator-detail.webp"><img loading="lazy" width="720" height="540" src="assets/img/starob-radiator-detail-s.webp" alt="Радиатор отопления с терморегулятором"><span>Радиатор отопления</span></button>
+          <button type="button" class="g" data-src="assets/img/starob-radiator-wall.webp"><img loading="lazy" width="720" height="540" src="assets/img/starob-radiator-wall-s.webp" alt="Радиатор под окном, подводка труб"><span>Радиатор и подводка</span></button>
+          <button type="button" class="g" data-src="assets/img/starob-radiator-window.webp"><img loading="lazy" width="720" height="540" src="assets/img/starob-radiator-window-s.webp" alt="Монтаж радиатора под окном"><span>Радиатор под окном</span></button>
+          <button type="button" class="g" data-src="assets/img/starob-sinks-marble.webp"><img loading="lazy" width="720" height="540" src="assets/img/starob-sinks-marble-s.webp" alt="Умывальники в санузле с облицовкой плиткой"><span>Сантехника в санузле</span></button>
         </div>
       </article>
       <article class="work">
@@ -124,11 +173,13 @@
           <h3>Фасады</h3>
           <ul><li>Навесные вентилируемые фасады</li><li>Утепление минеральной ватой</li><li>Штукатурные фасады и окраска</li><li>Ремонт оконных откосов</li></ul>
         </div>
-        <div class="work__ph gal" style="--n:4">
+        <div class="work__ph gal" style="--n:6">
           <button type="button" class="g" data-src="assets/img/vent-a.webp"><img loading="lazy" width="720" height="540" src="assets/img/vent-a-s.webp" alt="Монтаж вентилируемого фасада длинного корпуса"><span>Вентилируемый фасад</span></button>
           <button type="button" class="g" data-src="assets/img/vent-b.webp"><img loading="lazy" width="720" height="540" src="assets/img/vent-b-s.webp" alt="Монтаж фасадной системы на лесах"><span>Подсистема фасада</span></button>
           <button type="button" class="g" data-src="assets/img/insulation.webp"><img loading="lazy" width="720" height="540" src="assets/img/insulation-s.webp" alt="Утепление фасада минеральной ватой"><span>Утепление</span></button>
           <button type="button" class="g" data-src="assets/img/facade.webp"><img loading="lazy" width="720" height="540" src="assets/img/facade-s.webp" alt="Фасадные работы на строительных лесах"><span>Фасад на лесах</span></button>
+          <button type="button" class="g" data-src="assets/img/facade-scaffold-1.webp"><img loading="lazy" width="720" height="540" src="assets/img/facade-scaffold-1-s.webp" alt="Реконструкция фасада здания на строительных лесах"><span>Реконструкция фасада</span></button>
+          <button type="button" class="g" data-src="assets/img/facade-scaffold-2.webp"><img loading="lazy" width="720" height="540" src="assets/img/facade-scaffold-2-s.webp" alt="Фасад с утеплением на лесах, вид с улицы"><span>Фасад на лесах</span></button>
         </div>
       </article>
       <article class="work">
@@ -137,11 +188,15 @@
           <h3>Кровли</h3>
           <ul><li>Мягкие кровли</li><li>Металлические кровли</li><li>Аварийно-восстановительный ремонт</li><li>Вентшахты и утепление кровель</li></ul>
         </div>
-        <div class="work__ph gal" style="--n:4">
+        <div class="work__ph gal" style="--n:8">
           <button type="button" class="g" data-src="assets/img/roof-metal-1.webp"><img loading="lazy" width="720" height="540" src="assets/img/roof-metal-1-s.webp" alt="Металлическая кровля: вид с высоты"><span>Металлическая кровля</span></button>
           <button type="button" class="g" data-src="assets/img/roof-metal-3.webp"><img loading="lazy" width="720" height="540" src="assets/img/roof-metal-3-s.webp" alt="Металлическая кровля: фальцы и примыкания"><span>Фальцы и примыкания</span></button>
           <button type="button" class="g" data-src="assets/img/roof-steel.webp"><img loading="lazy" width="720" height="540" src="assets/img/roof-steel-s.webp" alt="Фальцевая кровля из оцинкованной стали"><span>Кровля из стали</span></button>
           <button type="button" class="g" data-src="assets/img/roof.webp"><img loading="lazy" width="720" height="540" src="assets/img/roof-s.webp" alt="Устройство мягкой кровли"><span>Устройство мягкой кровли</span></button>
+          <button type="button" class="g" data-src="assets/img/roof-seam-chimneys.webp"><img loading="lazy" width="720" height="540" src="assets/img/roof-seam-chimneys-s.webp" alt="Фальцевая кровля с дымовыми трубами"><span>Фальцевая кровля</span></button>
+          <button type="button" class="g" data-src="assets/img/roof-seam-valley.webp"><img loading="lazy" width="720" height="540" src="assets/img/roof-seam-valley-s.webp" alt="Ендова фальцевой кровли"><span>Ендова и фальцы</span></button>
+          <button type="button" class="g" data-src="assets/img/roof-seam-aerial.webp"><img loading="lazy" width="720" height="540" src="assets/img/roof-seam-aerial-s.webp" alt="Фальцевая кровля многоэтажного дома, вид сверху"><span>Кровля сверху</span></button>
+          <button type="button" class="g" data-src="assets/img/roof-seam-panorama.webp"><img loading="lazy" width="720" height="540" src="assets/img/roof-seam-panorama-s.webp" alt="Кровля жилого комплекса с высоты"><span>Кровля с высоты</span></button>
         </div>
       </article>
       <article class="work">
@@ -150,11 +205,15 @@
           <h3>Отделка помещений</h3>
           <ul><li>Стены, потолки, полы</li><li>Окна и двери: замена блоков</li><li>Санузлы: сантехника, отделка</li><li>Залы и общественные помещения</li></ul>
         </div>
-        <div class="work__ph gal" style="--n:4">
+        <div class="work__ph gal" style="--n:8">
           <button type="button" class="g" data-src="assets/img/sanatorium-02-hall-stage.webp"><img loading="lazy" width="720" height="540" src="assets/img/sanatorium-02-hall-stage-s.webp" alt="Зал со сценой и экраном после ремонта"><span>Зал после ремонта</span></button>
           <button type="button" class="g" data-src="assets/img/sanatorium-03-hall-wide.webp"><img loading="lazy" width="720" height="540" src="assets/img/sanatorium-03-hall-wide-s.webp" alt="Зал: окрашенные стены, новый пол и освещение"><span>Отделка зала</span></button>
           <button type="button" class="g" data-src="assets/img/sanatorium-07-window-view.webp"><img loading="lazy" width="720" height="540" src="assets/img/sanatorium-07-window-view-s.webp" alt="Новое пластиковое окно, вид на территорию санатория"><span>Замена окон</span></button>
           <button type="button" class="g" data-src="assets/img/sanatorium-10-facade-entrance.webp"><img loading="lazy" width="720" height="540" src="assets/img/sanatorium-10-facade-entrance-s.webp" alt="Входная группа с остеклением и фасад"><span>Входная группа и фасад</span></button>
+          <button type="button" class="g" data-src="assets/img/starob-room-window-radiator.webp"><img loading="lazy" width="720" height="540" src="assets/img/starob-room-window-radiator-s.webp" alt="Помещение после отделки: окно, радиатор, плитка на полу"><span>Отделка помещения</span></button>
+          <button type="button" class="g" data-src="assets/img/starob-room-long.webp"><img loading="lazy" width="720" height="540" src="assets/img/starob-room-long-s.webp" alt="Просторное помещение после отделки"><span>Помещение после отделки</span></button>
+          <button type="button" class="g" data-src="assets/img/starob-room-bright.webp"><img loading="lazy" width="720" height="540" src="assets/img/starob-room-bright-s.webp" alt="Помещение с новыми окнами и полом"><span>Окна и полы</span></button>
+          <button type="button" class="g" data-src="assets/img/starob-room-window-pair.webp"><img loading="lazy" width="720" height="540" src="assets/img/starob-room-window-pair-s.webp" alt="Помещение с новым окном и подвесным потолком"><span>Окна и потолки</span></button>
         </div>
       </article>
       <article class="work">
@@ -163,11 +222,53 @@
           <h3>Медицинские помещения</h3>
           <ul><li>Переоборудование под рентген, КТ и МРТ</li><li>Проект и экспертиза для переоборудования</li><li>Палаты и стерилизационные</li><li>Госпитали для ветеранов войн № 1 и № 2: с 2024 года</li></ul>
         </div>
-        <div class="work__ph gal" style="--n:2">
-          <button type="button" class="g" data-src="assets/img/interior-05-room-window.webp"><img loading="lazy" width="720" height="540" src="assets/img/interior-05-room-window-s.webp" alt="Палата с окном и медицинской панелью"><span>Палата с медицинской панелью</span></button>
-          <button type="button" class="g" data-src="assets/img/interior-02-doorway-sink.webp"><img loading="lazy" width="720" height="540" src="assets/img/interior-02-doorway-sink-s.webp" alt="Помещение с раковиной и дверным проёмом"><span>Санузел после ремонта</span></button>
+        <div class="work__ph gal" style="--n:8">
+          <button type="button" class="g" data-src="assets/img/medical-rentgen-equipment.webp"><img loading="lazy" width="720" height="540" src="assets/img/medical-rentgen-equipment-s.webp" alt="Рентген-кабинет с цифровым рентгеновским комплексом"><span>Рентген-кабинет</span></button>
+          <button type="button" class="g" data-src="assets/img/medical-ct-room.webp"><img loading="lazy" width="720" height="540" src="assets/img/medical-ct-room-s.webp" alt="Кабинет компьютерной томографии с КТ-аппаратом"><span>Кабинет КТ</span></button>
+          <button type="button" class="g" data-src="assets/img/medical-rentgen-workstation.webp"><img loading="lazy" width="720" height="540" src="assets/img/medical-rentgen-workstation-s.webp" alt="Пост управления рентгенодиагностическим комплексом"><span>Пост управления</span></button>
+          <button type="button" class="g" data-src="assets/img/medical-dubrovka-xray-a.webp"><img loading="lazy" width="720" height="540" src="assets/img/medical-dubrovka-xray-a-s.webp" alt="Рентген-кабинет, ГВВ № 1"><span>Рентген, ГВВ № 1</span></button>
+          <button type="button" class="g" data-src="assets/img/medical-dubrovka-ct-gantry.webp"><img loading="lazy" width="720" height="540" src="assets/img/medical-dubrovka-ct-gantry-s.webp" alt="Кабинет КТ, ГВВ № 1"><span>КТ, ГВВ № 1</span></button>
+          <button type="button" class="g" data-src="assets/img/medical-rechniki-xray-hall.webp"><img loading="lazy" width="720" height="540" src="assets/img/medical-rechniki-xray-hall-s.webp" alt="Рентген-зал с цифровым комплексом"><span>Рентген-зал</span></button>
+          <button type="button" class="g" data-src="assets/img/medical-dubrovka-ct-table.webp"><img loading="lazy" width="720" height="540" src="assets/img/medical-dubrovka-ct-table-s.webp" alt="КТ-аппарат после монтажа отделки"><span>КТ-аппарат</span></button>
+          <button type="button" class="g" data-src="assets/img/medical-ward.webp"><img loading="lazy" width="720" height="540" src="assets/img/medical-ward-s.webp" alt="Палата после отделки"><span>Палата</span></button>
         </div>
       </article>
+      <div class="beaf">
+        <div class="beaf__head">
+          <h3>До и после</h3>
+          <p>Сдвиньте ползунок: так выглядели помещения до ремонта и так мы передали их заказчику.</p>
+        </div>
+        <div class="beaf__grid">
+        <figure class="cmp" style="--p:50%">
+          <img src="assets/img/ba-room-after.webp" width="900" height="900" loading="lazy" alt="Помещение: до и после ремонта — после">
+          <img class="cmp__b" src="assets/img/ba-room-before.webp" width="900" height="900" loading="lazy" alt="Помещение: до и после ремонта — до">
+          <span class="cmp__l cmp__l--b">До</span><span class="cmp__l cmp__l--a">После</span>
+          <input type="range" min="0" max="100" value="50" aria-label="Сравнить до и после: Комната">
+          <figcaption>Комната</figcaption>
+        </figure>
+        <figure class="cmp" style="--p:50%">
+          <img src="assets/img/ba-corridor-after.webp" width="900" height="900" loading="lazy" alt="Коридор: до и после ремонта — после">
+          <img class="cmp__b" src="assets/img/ba-corridor-before.webp" width="900" height="900" loading="lazy" alt="Коридор: до и после ремонта — до">
+          <span class="cmp__l cmp__l--b">До</span><span class="cmp__l cmp__l--a">После</span>
+          <input type="range" min="0" max="100" value="50" aria-label="Сравнить до и после: Коридор">
+          <figcaption>Коридор</figcaption>
+        </figure>
+        <figure class="cmp" style="--p:50%">
+          <img src="assets/img/ba-shower-after.webp" width="900" height="900" loading="lazy" alt="Душевая: до и после ремонта — после">
+          <img class="cmp__b" src="assets/img/ba-shower-before.webp" width="900" height="900" loading="lazy" alt="Душевая: до и после ремонта — до">
+          <span class="cmp__l cmp__l--b">До</span><span class="cmp__l cmp__l--a">После</span>
+          <input type="range" min="0" max="100" value="50" aria-label="Сравнить до и после: Душевая">
+          <figcaption>Душевая</figcaption>
+        </figure>
+        <figure class="cmp" style="--p:50%">
+          <img src="assets/img/ba-boiler-after.webp" width="900" height="900" loading="lazy" alt="Узел водоснабжения: до и после ремонта — после">
+          <img class="cmp__b" src="assets/img/ba-boiler-before.webp" width="900" height="900" loading="lazy" alt="Узел водоснабжения: до и после ремонта — до">
+          <span class="cmp__l cmp__l--b">До</span><span class="cmp__l cmp__l--a">После</span>
+          <input type="range" min="0" max="100" value="50" aria-label="Сравнить до и после: Водонагреватель">
+          <figcaption>Водонагреватель</figcaption>
+        </figure>
+        </div>
+      </div>
       <div class="how">
         <h3>Как мы работаем</h3>
         <ol>
@@ -184,14 +285,9 @@
     <div class="wrap">
       <div class="sec__head">
         <p class="kicker">Допуски</p>
-        <h2>СРО и лицензия МЧС</h2>
+        <h2>Лицензия МЧС России</h2>
       </div>
       <div class="adm">
-        <article>
-          <h3>Членство в СРО</h3>
-          <p class="adm__name">Ассоциация «Капитальный ремонт и строительство» (СРО «КРС»)</p>
-          <p>Право на строительство, реконструкцию и капитальный ремонт объектов капитального строительства.</p>
-        </article>
         <article>
           <h3>Лицензия МЧС России</h3>
           <p class="adm__name">№ 77-Б/04923 от 3 мая 2017 года, бессрочная</p>
@@ -246,6 +342,35 @@
           <li><button type="button" class="c" aria-expanded="false">Жилищник района Текстильщики<i aria-hidden="true">+</i></button><div class="more"><dl><dt>Что делали</dt><dd>Ремонт и капитальный ремонт кровли здания управы, капитальный ремонт общего имущества многоквартирного дома.</dd><dt>Годы</dt><dd>2020–2022</dd></dl></div></li>
         </ul></details>
       </div>
+    </div>
+  </section>
+
+  <section class="sec" id="sro">
+    <div class="wrap grid2">
+      <div>
+        <p class="kicker">Допуски</p>
+        <h2>Член СРО с&nbsp;2009 года</h2>
+        <p class="sro__lead">Право выполнять строительство, реконструкцию и капитальный ремонт подтверждено выпиской из реестра членов СРО Национального объединения строителей.</p>
+        <p class="sro__status"><span>Право действует</span> Выписка от 26.10.2026, актуальна на день формирования</p>
+        <div class="sro__doc">
+          <a class="sro__thumb" href="assets/docs/sro-vypiska-2026-10-26.pdf" target="_blank" rel="noopener" aria-label="Открыть выписку из реестра СРО, PDF, 1,5 МБ">
+            <img loading="lazy" width="636" height="900" src="assets/img/sro-vypiska-1-s.webp" alt="Первая страница выписки из реестра членов СРО от 26.10.2026">
+          </a>
+          <div class="sro__links">
+            <a class="btn" href="assets/docs/sro-vypiska-2026-10-26.pdf" target="_blank" rel="noopener">Открыть выписку, PDF</a>
+            <a class="sro__ext" href="https://reestr.nostroy.ru/" target="_blank" rel="noopener noreferrer">Проверить в реестре НОСТРОЙ ↗</a>
+          </div>
+        </div>
+      </div>
+      <dl class="sro__facts">
+        <div><dt>СРО</dt><dd>Ассоциация «Капитальный ремонт и строительство», СРО «КРС»</dd></div>
+        <div><dt>Номер СРО в государственном реестре</dt><dd>СРО-С-045-05102009</dd></div>
+        <div><dt>Номер члена в реестре СРО</dt><dd>68, в реестре с 29.04.2009</dd></div>
+        <div><dt>Право на работы</dt><dd>Строительство, реконструкция, капитальный ремонт и снос объектов капитального строительства, кроме особо опасных, технически сложных и уникальных</dd></div>
+        <div><dt>Компенсационный фонд возмещения вреда</dt><dd>Второй уровень ответственности: работы по одному договору до 500&nbsp;млн&nbsp;₽</dd></div>
+        <div><dt>Компенсационный фонд обеспечения договорных обязательств</dt><dd>Первый уровень ответственности: договоры по конкурентным процедурам до 90&nbsp;млн&nbsp;₽</dd></div>
+        <div><dt>Приостановления и ограничения права</dt><dd>Нет</dd></div>
+      </dl>
     </div>
   </section>
 
