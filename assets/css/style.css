@@ -65,7 +65,7 @@ h1 { margin: 0 0 26px; overflow-wrap: break-word; font: 700 clamp(30px, 4.2vw, 5
 .btn--ghost { background: transparent; border-color: rgba(255, 255, 255, .4); }
 .btn--ghost:hover { background: rgba(255, 255, 255, .08); border-color: #fff; }
 .hero__stats { margin: 0; border-top: 1px solid rgba(255, 255, 255, .18); }
-.hero__stats > div { display: grid; grid-template-columns: minmax(150px, auto) minmax(0, 1fr); align-items: center; gap: 24px; padding: 22px 0; border-bottom: 1px solid rgba(255, 255, 255, .18); }
+.hero__stats > div { display: grid; grid-template-columns: 190px minmax(0, 1fr); align-items: center; gap: 24px; padding: 22px 0; border-bottom: 1px solid rgba(255, 255, 255, .18); }
 .hero__stats dd { margin: 0; font: 700 clamp(40px, 5vw, 64px)/1 var(--f-display); color: #fff; font-variant-numeric: tabular-nums; }
 .hero__stats dd span { color: var(--signal); }
 .hero__stats .dd-s { font-size: clamp(28px, 3.4vw, 42px); }
@@ -97,8 +97,8 @@ h2 { margin: 0; max-width: 760px; font: 700 clamp(28px, 3.4vw, 44px)/1.12 var(--
 .how { display: grid; grid-template-columns: minmax(0, 1fr); justify-items: start; gap: 24px; margin-top: 24px; padding: 32px; background: var(--graphite); color: var(--on-dark); }
 .how h3 { margin: 0; font: 700 22px/1.2 var(--f-display); color: #fff; }
 .how ol { width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 32px; margin: 0; padding: 0; list-style: none; }
-.how li { display: flex; gap: 12px; align-items: baseline; font-size: 15px; line-height: 1.45; }
-.how b { font: 700 15px/1 var(--f-display); color: var(--signal); }
+.how li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; align-items: baseline; font-size: 15px; line-height: 1.45; }
+.how b { font: 700 15px/1.45 var(--f-display); color: var(--signal); font-variant-numeric: tabular-nums; }
 
 /* Госпитали ветеранов войн */
 
@@ -175,7 +175,7 @@ h2 { margin: 0; max-width: 760px; font: 700 clamp(28px, 3.4vw, 44px)/1.12 var(--
   .logo__txt small, .phone { display: none; }
   .phone-btn { display: grid; }
   .burger { margin-left: 8px; }
-  .hero__stats > div { grid-template-columns: minmax(110px, auto) minmax(0, 1fr); gap: 16px; padding: 16px 0; }
+  .hero__stats > div { grid-template-columns: 128px minmax(0, 1fr); gap: 16px; padding: 16px 0; }
   .how { padding: 22px 18px; }
   .how ol { grid-template-columns: 1fr; gap: 12px; }
   h1 { font-size: clamp(28px, 8vw, 36px); }
@@ -270,3 +270,5 @@ h2 { margin: 0; max-width: 760px; font: 700 clamp(28px, 3.4vw, 44px)/1.12 var(--
 .cg li .more { width: max(calc(100% + 4px), 360px); max-height: 70vh; overflow-y: auto; }
 .more .rv { padding-left: 12px; border-left: 3px solid var(--signal); font-size: 14px; line-height: 1.55; }
 @media (max-width: 640px) { .cg summary { padding: 16px 2px; } .cg li .more, .cg li:nth-child(n) .more { max-height: none; } }
+
+.timeline b small { display: block; margin-top: 4px; font: 600 13px/1.2 var(--f-body); letter-spacing: .02em; color: var(--signal-d); }

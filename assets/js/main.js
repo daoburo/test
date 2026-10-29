@@ -1,6 +1,9 @@
 (function () {
   var $ = function (s) { return document.querySelector(s); };
-  $('#yr').textContent = new Date().getFullYear();
+  // Стаж считается от текущего года, чтобы цифры не устаревали
+  Array.prototype.forEach.call(document.querySelectorAll('[data-years]'), function (el) {
+    el.textContent = new Date().getFullYear() - Number(el.dataset.years);
+  });
 
   // Меню на телефоне
   var nav = $('#nav'), burger = $('#burger');
