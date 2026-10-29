@@ -369,3 +369,10 @@ h2 { margin: 0; max-width: 760px; font: 700 clamp(28px, 3.4vw, 44px)/1.12 var(--
 .car .cmp { aspect-ratio: 4 / 3; max-height: 340px; }
 @media (max-width: 1020px) { .work { grid-template-columns: 1fr; } }
 @media (max-width: 640px) { .car { max-width: none; } .car .cmp { aspect-ratio: 4 / 3; max-height: 300px; } }
+/* До и после: заголовок слева, снимок справа, как в видах работ */
+@media (min-width: 1021px) {
+  .beaf { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 48px; align-items: start; }
+  .beaf__head { margin-bottom: 0; }
+  .car { max-width: 520px; }
+  .car .cmp { max-height: 390px; }
+}
