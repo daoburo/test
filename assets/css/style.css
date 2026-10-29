@@ -396,3 +396,41 @@ h2 { margin: 0; max-width: 760px; font: 700 clamp(28px, 3.4vw, 44px)/1.12 var(--
 .steps b { display: block; margin-bottom: 8px; font: 700 20px/1.2 var(--f-display); color: var(--ink); }
 @media (max-width: 1020px) { .coop, .steps { grid-template-columns: 1fr; } .pg { padding-block: 48px; } }
 @media (max-width: 640px) { .tags { grid-template-columns: 1fr; } }
+
+/* Страница для бригад: крупно и просто, в первую очередь для телефона */
+.pg--hero { padding-block: 64px 56px; }
+.pg--hero h1 { max-width: 16ch; font-size: clamp(34px, 6vw, 60px); }
+.pg--hero .pg__lead { font-size: 21px; line-height: 1.5; color: #fff; }
+.call { display: inline-block; padding: 22px 36px; background: var(--signal); color: #fff; text-decoration: none; font: 700 clamp(26px, 5vw, 40px)/1.1 var(--f-display); }
+.call small { display: block; margin-bottom: 8px; font: 600 16px/1 var(--f-body); letter-spacing: .1em; text-transform: uppercase; }
+.call:hover { background: var(--signal-d); color: #fff; }
+.pg__sub { margin: 18px 0 0; font-size: 18px; color: var(--on-dark-mute); }
+.pg__sub--dark { color: var(--mute); margin: 0 0 20px; }
+.pg__sec { padding-block: 64px; }
+.pg__sec h2 { margin: 0 0 28px; font: 700 clamp(26px, 4vw, 38px)/1.15 var(--f-display); color: var(--ink); }
+.trades { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.trades li { position: relative; overflow: hidden; background: var(--graphite); color: #fff; }
+.trades img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; opacity: .8; }
+.trades b { position: absolute; left: 0; right: 0; bottom: 34px; padding: 0 16px; font: 700 clamp(20px, 2.6vw, 26px)/1.15 var(--f-display); text-shadow: 0 1px 8px rgba(0,0,0,.6); }
+.trades span { position: absolute; left: 0; right: 0; bottom: 10px; padding: 0 16px; font-size: 16px; color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,.6); }
+.trades li::after { content: ""; position: absolute; inset: 40% 0 0; background: linear-gradient(transparent, rgba(0,0,0,.7)); }
+.trades b, .trades span { z-index: 1; }
+.pg__also { margin: 20px 0 0; font-size: 18px; color: var(--ink); }
+.say { margin: 0 0 32px; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.say li { padding: 20px 24px; background: var(--paper); border-left: 6px solid var(--signal); font-size: 18px; }
+.say b { display: block; margin-bottom: 4px; font: 700 20px/1.2 var(--f-display); color: var(--ink); }
+.pg__btns { display: flex; flex-wrap: wrap; gap: 12px; }
+.pg .btn, .pg__btns .btn { font-size: 19px; padding: 18px 32px; }
+.btn--line { background: transparent; border-color: var(--ink); color: var(--ink); }
+.btn--line:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+.pg__addr { margin: 0 0 6px; font: 700 clamp(20px, 3vw, 28px)/1.3 var(--f-display); color: var(--ink); }
+.callbar { display: none; }
+@media (max-width: 760px) {
+  .trades { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .trades b { font-size: 17px; bottom: 30px; padding: 0 10px; }
+  .trades span { font-size: 14px; padding: 0 10px; bottom: 8px; }
+  .say { grid-template-columns: 1fr; }
+  .call { display: block; text-align: center; }
+  .pg__btns .btn { flex: 1 1 100%; text-align: center; }
+  .callbar { display: block; position: sticky; bottom: 0; z-index: 20; padding: 16px; background: var(--signal); color: #fff; text-align: center; text-decoration: none; font: 700 18px/1.2 var(--f-body); }
+}
